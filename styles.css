@@ -137,23 +137,23 @@ svg {
 
 .profile-photo {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     object-position: 50% 50%;
     border-radius: 1.5rem;
     display: block;
-    transition: aspect-ratio 0.3s ease, object-position 0.3s ease, margin-bottom 0.3s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-    margin-bottom: 0.5rem;
+    margin: 0 auto 0.5rem auto;
     background: rgba(255, 255, 255, 0.05);
 }
 
 .profile-panel:hover .profile-photo,
 .profile-panel:focus-within .profile-photo {
-    aspect-ratio: 8 / 2;
-    object-position: 50% 50%;
-    transition: aspect-ratio 0.3s ease, object-position 0.3s ease;
-    margin-bottom: 0.25rem;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
 }
 
 .profile-info {
@@ -1739,11 +1739,12 @@ h3::after {
     }
 
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
+        max-width: 200px;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        margin-bottom: 0 !important;
+        margin: 0 auto !important;
         object-fit: contain;
         background: rgba(255, 255, 255, 0.05);
     }
@@ -1894,11 +1895,12 @@ h3::after {
     }
 
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
+        max-width: 180px;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        margin-bottom: 0 !important;
+        margin: 0 auto !important;
         object-fit: contain;
         background: rgba(255, 255, 255, 0.05);
     }
@@ -1960,11 +1962,12 @@ h3::after {
     }
 
     .profile-photo {
-        width: 150px !important;
-        height: 150px !important;
+        width: 160px !important;
+        height: 160px !important;
+        max-width: 160px !important;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        margin-bottom: 0 !important;
+        margin: 0 auto !important;
         object-fit: contain;
         background: rgba(255, 255, 255, 0.05);
     }
