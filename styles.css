@@ -133,15 +133,17 @@ svg {
     position: relative;
     z-index: 2;
     flex-shrink: 0;
+    overflow: visible;
 }
 
 .profile-photo {
     width: 100%;
     max-width: 600px;
+    max-height: 600px;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    object-position: 50% 50%;
+    object-position: center center;
     border-radius: 1.5rem;
     display: block;
     transition: all 0.3s ease;
