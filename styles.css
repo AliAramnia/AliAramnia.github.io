@@ -124,7 +124,7 @@ svg {
     justify-content: space-between;
 }
 
-.profile-header {
+.profile-avatar-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,27 +134,34 @@ svg {
     z-index: 2;
     flex-shrink: 0;
     overflow: visible;
+    padding-top: 0.6rem;
 }
 
-.profile-photo {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
+.profile-avatar {
+    width: 168px;
+    height: 168px;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center 20%;
-    border-radius: 1.5rem;
-    display: block;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.92);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background:
+        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), transparent 55%),
+        linear-gradient(160deg, rgba(99, 102, 241, 0.42), rgba(139, 92, 246, 0.4));
     transition: all 0.3s ease;
-    box-shadow: none;
-    margin: 0 auto 0.5rem auto;
-    background: transparent;
-    border: none;
-    padding: 0;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    margin: 0 auto 0.8rem auto;
 }
 
-.profile-panel:hover .profile-photo,
-.profile-panel:focus-within .profile-photo {
+.profile-panel:hover .profile-avatar,
+.profile-panel:focus-within .profile-avatar {
     transform: scale(1.02);
     transition: all 0.3s ease;
 }
