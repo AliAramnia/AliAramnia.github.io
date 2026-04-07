@@ -222,6 +222,27 @@ svg {
     margin-bottom: 0;
 }
 
+.profile-status {
+    margin-top: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.28), rgba(139, 92, 246, 0.24));
+    letter-spacing: 0.02em;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-panel:hover .profile-status,
+.profile-panel:focus-within .profile-status {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.22);
+}
+
 .profile-contacts {
     display: flex;
     flex-direction: column;

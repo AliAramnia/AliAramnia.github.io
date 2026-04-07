@@ -192,9 +192,13 @@ function initAnimations() {
 // Add keyboard navigation for tabs
 document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-        const activeTab = document.querySelector('.tab-button.active');
-        const tabs = Array.from(document.querySelectorAll('.tab-button'));
+        const activeTab = document.querySelector('.nav-button.active');
+        const tabs = Array.from(document.querySelectorAll('.nav-button'));
         const currentIndex = tabs.indexOf(activeTab);
+
+        if (currentIndex === -1 || tabs.length === 0) {
+            return;
+        }
         
         let newIndex;
         if (e.key === 'ArrowLeft') {
@@ -257,7 +261,7 @@ function printResume() {
 // Social media sharing (optional)
 function shareResume(platform) {
     const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent('Ali Abbasi - Machine Learning Engineer');
+    const title = encodeURIComponent('Ali Aramnia - Electronic Engineering');
     
     let shareUrl;
     switch(platform) {
@@ -298,7 +302,7 @@ function initSkillTags() {
 
 // Copy email to clipboard
 function copyEmail() {
-    const email = 'abbasialiar@gmail.com';
+    const email = 'AliAramniaa@gmail.com';
     navigator.clipboard.writeText(email).then(function() {
         // Show a temporary notification
         const notification = document.createElement('div');
@@ -460,10 +464,10 @@ async function fetchGitHubRepos() {
                 <div class="project-header">
                     <h4>${repo.name}</h4>
                     <div class="project-links">
-                        <a href="${repo.html_url}" target="_blank" class="project-link">
+                        <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="project-link">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
+                        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
                     </div>
                     <span class="duration">Updated: ${new Date(repo.updated_at).toLocaleDateString()}</span>
                 </div>
@@ -493,6 +497,11 @@ if (document.readyState === 'loading') {
 }
 
 function initAll() {
+    const yearElement = document.getElementById('copyrightYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
     initBackground();
     initNavigation();
     initEffects();
