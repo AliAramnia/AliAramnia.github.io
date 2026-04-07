@@ -124,7 +124,7 @@ svg {
     justify-content: space-between;
 }
 
-.profile-avatar-wrap {
+.profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,31 +137,25 @@ svg {
     padding-top: 0.6rem;
 }
 
-.profile-avatar {
-    width: 168px;
-    height: 168px;
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: rgba(255, 255, 255, 0.92);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background:
-        radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), transparent 55%),
-        linear-gradient(160deg, rgba(99, 102, 241, 0.42), rgba(139, 92, 246, 0.4));
+    object-fit: cover;
+    object-position: center 16%;
+    display: block;
+    border: none;
+    background: transparent;
+    padding: 0;
     transition: all 0.3s ease;
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     margin: 0 auto 0.8rem auto;
 }
 
-.profile-panel:hover .profile-avatar,
-.profile-panel:focus-within .profile-avatar {
+.profile-panel:hover .profile-photo,
+.profile-panel:focus-within .profile-photo {
     transform: scale(1.02);
     transition: all 0.3s ease;
 }
@@ -1776,15 +1770,11 @@ h3::after {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         margin: 0 auto !important;
-        object-fit: contain;
-        padding: 10px;
-        background: linear-gradient(135deg, 
-            rgba(139, 92, 246, 0.15) 0%, 
-            rgba(102, 126, 234, 0.12) 50%,
-            rgba(139, 92, 246, 0.15) 100%);
-        box-shadow: 
-            0 8px 30px rgba(0, 0, 0, 0.4),
-            inset 0 0 40px rgba(139, 92, 246, 0.1);
+        object-fit: cover;
+        object-position: center 16%;
+        padding: 0;
+        background: transparent;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     }
 
     .profile-header {
@@ -1939,15 +1929,11 @@ h3::after {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         margin: 0 auto !important;
-        object-fit: contain;
-        padding: 10px;
-        background: linear-gradient(135deg, 
-            rgba(139, 92, 246, 0.15) 0%, 
-            rgba(102, 126, 234, 0.12) 50%,
-            rgba(139, 92, 246, 0.15) 100%);
-        box-shadow: 
-            0 8px 30px rgba(0, 0, 0, 0.4),
-            inset 0 0 40px rgba(139, 92, 246, 0.1);
+        object-fit: cover;
+        object-position: center 16%;
+        padding: 0;
+        background: transparent;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     }
 
     .profile-info {
@@ -2013,15 +1999,11 @@ h3::after {
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         margin: 0 auto !important;
-        object-fit: contain;
-        padding: 8px;
-        background: linear-gradient(135deg, 
-            rgba(139, 92, 246, 0.15) 0%, 
-            rgba(102, 126, 234, 0.12) 50%,
-            rgba(139, 92, 246, 0.15) 100%);
-        box-shadow: 
-            0 6px 25px rgba(0, 0, 0, 0.4),
-            inset 0 0 30px rgba(139, 92, 246, 0.1);
+        object-fit: cover;
+        object-position: center 16%;
+        padding: 0;
+        background: transparent;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
     }
 
     .profile-info {
